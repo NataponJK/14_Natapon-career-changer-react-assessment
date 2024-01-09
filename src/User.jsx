@@ -1,6 +1,7 @@
 const User = ({employees}) => {
   return (
     <>
+    <table>
       <tr>
         <th>Name</th>
         <th>Lastname</th>
@@ -13,6 +14,7 @@ const User = ({employees}) => {
           <td>{employee.position}</td>
         </tr>
       ))}
+      </table>
     </>
   );
 };

@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    padding: 0px;
+    margin: 0px;
+    color: #3b3b3b;
+    background-color: #bbbbbb;
+}
+.boxBtn{
+    gap:20px
+}
+
+.main {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    text-align: center;
+}
+
+.buttonbox {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px
+}
+
+.savebtn{
+    background-color: #7c7c7c;
+}
+.deletebtn:hover{
+    color: #7c7c7c;
+    background-color: #e0e0e0;
+}
+
+.deletebtn {
+    background-color: red;
+}
+.deletebtn:hover{
+    color: red;
+    background-color: #ffffff;
+}
+
+.biobox {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+button {
+    padding: 12px;
+    font-size: 24px;
+    background-color: #3b3b3b;
+    color:#ffffff;
+    border: none;
+    border-radius: 12px;
+}
+button:hover {
+    background-color: #b1b1b1;
+    color: #3b3b3b;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+input {
+    border-radius: 8px;
+    border-style: none;
+    padding: 10px;
+    font-size: 24px;
+}
+
+::placeholder {
+    color: #919191;
+    text-align: center;
+    font-size: 24px;
+  }
+
+h1 {
+    font-size: 60px;
+    padding: 20px;
+    color: black;
+  }
+h2 {
+    font-size: 36px;
+    padding: 10px;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 20px;
+}
+
+img {
+    width: 300px;
+    border-radius: 24px;
+    margin: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: solid white ;
+    padding: 20px;
+  }
+
+table {
+    width: 50%;
+    /* border: 1px solid black; */
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+}
+
+tr,td,th {
+    border: 1px solid black;
+    padding: 2px;
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}

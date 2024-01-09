@@ -1,4 +1,5 @@
 import { useState } from "react";
+// import './style.css'
 
 const Admin = ({employees, createData, removeData}) => {
   const [name, setName] = useState();
@@ -11,13 +12,13 @@ const Admin = ({employees, createData, removeData}) => {
     setName('');
     setLastname('');
     setPosition('');
-    console.log({name}, {lastname}, {position})
+//  console.log({name}, {lastname}, {position})
   }
 
   return (
     <>
+    <h2>Create User Here</h2>
       <form>
-        <h3>Create User Here</h3>
         <input 
         type="text" 
         placeholder="Name" 
@@ -36,7 +37,7 @@ const Admin = ({employees, createData, removeData}) => {
         value={position}
         onChange={(event)=> setPosition(event.target.value)}
         />
-        <button onClick={handleSave}>Save</button>
+        <button className='savebtn'onClick={handleSave}>Save</button>
       </form>
       <table>
       <thead>
@@ -53,7 +54,7 @@ const Admin = ({employees, createData, removeData}) => {
             <td>{employee.lastname}</td>
             <td>{employee.position}</td>
             <td>
-              <button onClick={() => removeData(employee.id)}>Delete</button>
+              <button className='deletebtn' onClick={() => removeData(employee.id)}>Delete</button>
             </td>
           </tr>
         ))}

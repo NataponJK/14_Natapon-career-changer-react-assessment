@@ -3,6 +3,7 @@ import axios, { AxiosHeaders } from "axios";
 import Layout from "./Layout";
 import User from "./User";
 import Admin from "./Admin";
+// import './style.css'
 // import { mockEmployees } from "./mockEmplayees"; // do not need anymore
 
 const Home = () => {
@@ -22,9 +23,9 @@ const Home = () => {
     // console.log(sector)
   };
 
-  const handleHide = () => {
-    setSector("");
-  };
+  // const handleHide = () => {
+  //   setSector("");
+  // };
 
   useEffect(() => {
     const getData = async () => {
@@ -58,18 +59,26 @@ const Home = () => {
     );
     if (response.status === 200) {
       setReload(!reload);
-    };
+    }
   };
 
   return (
     <Layout>
       <h1>Generation Thailand React - Assessment</h1>
-      <div>
+      <div className="buttonbox">
         <button onClick={handleUserbtn}>User Home Sector</button>
         <button onClick={handleAdminbtn}>Admin Home Sector</button>
-        <button onClick={handleHide}>Hide</button>
+        {/* <button onClick={handleHide}>Hide</button> */}
+      </div>
+      <div>
         {sector === "user" ? <User employees={employees} /> : null}
-        {sector === "admin" ? <Admin employees={employees} createData={createData} removeData={removeData} /> : null}
+        {sector === "admin" ? (
+          <Admin
+            employees={employees}
+            createData={createData}
+            removeData={removeData}
+          />
+        ) : null}
       </div>
     </Layout>
   );
@@ -113,21 +122,21 @@ const Home = () => {
 //     <>
 //       <form>
 //         <h3>Create User Here</h3>
-//         <input 
-//         type="text" 
-//         placeholder="Name" 
+//         <input
+//         type="text"
+//         placeholder="Name"
 //         value={name}
 //         onChange = {(event) => setName(event.target.value)}
 //         />
-//         <input 
-//         type="text" 
-//         placeholder="Last Name" 
+//         <input
+//         type="text"
+//         placeholder="Last Name"
 //         value={lastname}
 //         onChange = {(event)=> setLastname(event.target.value)}
 //         />
-//         <input 
-//         type="text" 
-//         placeholder="Position" 
+//         <input
+//         type="text"
+//         placeholder="Position"
 //         value={position}
 //         onChange={(event)=> setPosition(event.target.value)}
 //         />
@@ -156,6 +165,5 @@ const Home = () => {
 //     </>
 //   );
 // };
-
 
 export default Home;

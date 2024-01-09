@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Home from './Home';
 import Owner from './Owner';
+import './style.css'
 
 const router = createBrowserRouter ([
   {
